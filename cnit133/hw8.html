@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homework 8</title>
+<meta name="description" content="page with CNT 133 homework number 8">
+<h4><a href="index.html">Home</a></h4>
+<header><h1>CNIT 133 Homework 8 - Ajax Applications</h1></header>
+<script>
+    function showHint(str) {
+        if (str.length == 0){
+            document.getElementById("textHint").innerHTML="";
+            return;
+        } else {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200){
+                    document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "gethint.php?q=" + str, true);
+            xmlhttp.send();
+        }
+    }
+</script>
+</head>
+<body style="background-color:slategrey">
+    <p><b>Start typing a name in the input field below:</b></p>
+    <form action="">
+        <label for = "fname">First name:</label>
+        <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
+    </form>
+    <p>Suggestions: <span id="txtHint"></span></p>
+</body>
+<footer>
+   <br><br><p>The chosen API is The Football Prediction API is a REST API that offers prediction data (JSON) for upcoming football (soccer) matches. Link can be found <a href="https://boggio-analytics.com/fp-api/?ref=apilist.fun">here</a></p> 
+</footer>
+</html>

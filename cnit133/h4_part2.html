@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homework 4 - part 2</title>
+<meta name="description" content="page with CNT 133 homework number 4 - part 2">
+<h4><a href="index.html">Home</a>
+    <a href="hw4.html">Back</a> </h4>
+<script>
+    function process5(){
+        var P,Adeposit, rate;
+        P=1000;
+        rate=0.05; 
+        for (var year=1; year<=10; year++){   
+        Adeposit=P*(Math.pow(((1+rate)),year));    
+        document.getElementById("deposit"+year).value=Adeposit.toFixed(2);
+        document.getElementById("iRate"+year).value=rate;
+        }
+    }
+</script>
+<script>
+    function process6(){
+        var P,Adeposit, rate;
+        P=1000;
+        rate=0.06;    
+        for (var year=1; year<=10; year++){
+        Adeposit=P*(Math.pow(((1+rate)),year));    
+        document.getElementById("deposit6"+year).value=Adeposit.toFixed(2);
+        document.getElementById("iRate6"+year).value=rate;
+        }
+    }
+</script>
+<script>
+    function process7(){
+        var P, Adeposit, rate;
+        P=1000;
+        rate=0.07;    
+        for (var year=1; year<=10; year++){
+        Adeposit=P*(Math.pow(((1+rate)),year));    
+        document.getElementById("deposit7"+year).value=Adeposit.toFixed(2);
+        document.getElementById("iRate7"+year).value=rate;
+        }
+    }
+</script>
+</head>
+<body style="background-color:slategrey" onload=process5(),process6(),process7()>
+<header><h1>Part 2 - Compound Interest</h1></header>
+<p>Bellow presented calculated compound interest on a principal of <b>$1000</b> for interest rates of 5, 6, and 7%, for years 1 through 10.</p>
+<form id="myForm" name="myForm">
+    <table>
+        <h3 style="color: darkgreen">5% interest</h3>
+        <tr style="background-color: maroon; color: white;"><th> Year </th><th> Amount on deposit </th><th> Interest Rate </th></tr>
+        <tr style="background-color: orange;"><td>1</td><td><input type="text" id="deposit1" disabled></td><td><input type="text" id="iRate1" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>2</td><td><input type="text" id="deposit2" disabled></td><td><input type="text" id="iRate2" disabled></td></tr>
+        <tr style="background-color: orange;"><td>3</td><td><input type="text" id="deposit3" disabled></td><td><input type="text" id="iRate3" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>4</td><td><input type="text" id="deposit4" disabled></td><td><input type="text" id="iRate4" disabled></td></tr>
+        <tr style="background-color: orange;"><td>5</td><td><input type="text" id="deposit5" disabled></td><td><input type="text" id="iRate5" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>6</td><td><input type="text" id="deposit6" disabled></td><td><input type="text" id="iRate6" disabled></td></tr>
+        <tr style="background-color: orange;"><td>7</td><td><input type="text" id="deposit7" disabled></td><td><input type="text" id="iRate7" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>8</td><td><input type="text" id="deposit8" disabled></td><td><input type="text" id="iRate8" disabled></td></tr>
+        <tr style="background-color: orange;"><td>9</td><td><input type="text" id="deposit9" disabled></td><td><input type="text" id="iRate9" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>10</td><td><input type="text" id="deposit10" disabled></td><td><input type="text" id="iRate10" disabled></td></tr>
+    </table>
+    <table>
+        <h3 style="color:darkgreen">6% interest</h3>
+        <tr style="background-color: maroon; color: white;"><th> Year </th><th> Amount on deposit </th><th> Interest Rate </th></tr>
+        <tr style="background-color: orange;"><td>1</td><td><input type="text" id="deposit61" disabled></td><td><input type="text" id="iRate61" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>2</td><td><input type="text" id="deposit62" disabled></td><td><input type="text" id="iRate62" disabled></td></tr>
+        <tr style="background-color: orange;"><td>3</td><td><input type="text" id="deposit63" disabled></td><td><input type="text" id="iRate63" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>4</td><td><input type="text" id="deposit64" disabled></td><td><input type="text" id="iRate64" disabled></td></tr>
+        <tr style="background-color: orange;"><td>5</td><td><input type="text" id="deposit65" disabled></td><td><input type="text" id="iRate65" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>6</td><td><input type="text" id="deposit66" disabled></td><td><input type="text" id="iRate66" disabled></td></tr>
+        <tr style="background-color: orange;"><td>7</td><td><input type="text" id="deposit67" disabled></td><td><input type="text" id="iRate67" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>8</td><td><input type="text" id="deposit68" disabled></td><td><input type="text" id="iRate68" disabled></td></tr>
+        <tr style="background-color: orange;"><td>9</td><td><input type="text" id="deposit69" disabled></td><td><input type="text" id="iRate69" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>10</td><td><input type="text" id="deposit610" disabled></td><td><input type="text" id="iRate610" disabled></td></tr>
+    </table>
+    <table>
+        <h3 style="color:darkgreen" >7% interest</h3>
+        <tr style="background-color: maroon; color: white;"><th> Year </th><th> Amount on deposit </th><th> Interest Rate </th></tr>
+        <tr style="background-color: orange;"><td>1</td><td><input type="text" id="deposit71" disabled></td><td><input type="text" id="iRate71" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>2</td><td><input type="text" id="deposit72" disabled></td><td><input type="text" id="iRate72" disabled></td></tr>
+        <tr style="background-color: orange;"><td>3</td><td><input type="text" id="deposit73" disabled></td><td><input type="text" id="iRate73" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>4</td><td><input type="text" id="deposit74" disabled></td><td><input type="text" id="iRate74" disabled></td></tr>
+        <tr style="background-color: orange;"><td>5</td><td><input type="text" id="deposit75" disabled></td><td><input type="text" id="iRate75" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>6</td><td><input type="text" id="deposit76" disabled></td><td><input type="text" id="iRate76" disabled></td></tr>
+        <tr style="background-color: orange;"><td>7</td><td><input type="text" id="deposit77" disabled></td><td><input type="text" id="iRate77" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>8</td><td><input type="text" id="deposit78" disabled></td><td><input type="text" id="iRate78" disabled></td></tr>
+        <tr style="background-color: orange;"><td>9</td><td><input type="text" id="deposit79" disabled></td><td><input type="text" id="iRate79" disabled></td></tr>
+        <tr style="background-color: yellow;"><td>10</td><td><input type="text" id="deposit710" disabled></td><td><input type="text" id="iRate710" disabled></td></tr>
+    </table>
+</html>

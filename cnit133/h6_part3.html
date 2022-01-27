@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homework 6 - part 3</title>
+<meta name="description" content="page with CNT 133 homework number 6 - part 3">
+<script> 
+function parseNumber() {
+       
+       var errMsg="Phone Numbers has wrong format - Please use (999) 999-9999";     
+
+       var completeNumber = document.getElementById("input").value;
+
+       inputRegExp = /^(\()(\d{3})(\))(\s)(\d{3})(-\d{4})$/;
+        
+       if ( ! inputRegExp.test(completeNumber))
+
+           document.getElementById("errOut").innerHTML = errMsg;
+
+       else  {  
+
+              var tokens = completeNumber.split( " ");
+              var areaMain = tokens[ 0 ];
+              var first3d = tokens[ 1 ];
+
+              document.getElementById("areaCode").value = areaMain;
+
+             document.getElementById("first3").value = first3d;
+
+             last4d = completeNumber.substr( 10, 11 );
+             document.getElementById("last4").value = last4d;
+    
+            }
+
+    }
+
+   function res() {   
+                  document.getElementById("errOut").innerHTML =""; 
+                  document.getElementById("input").focus();
+                  }
+</script>
+<style>
+   div {font-size: 18px; font-weight: bold; color:rgb(180, 2, 2);}
+</style>
+</head>
+<body style="background-color:slategrey">
+    <h4><a href="index.html">Home</a>
+    <a href="hw6.html">Back</a> </h4>
+<header><h1>Part 3 - Phone number</h1></header>
+<div id ="errOut"></div> 
+<br>
+      <form name="myForm">
+         <table>
+            <tr>
+               <td>Enter a Phone Number <br>
+                  [in the format (999) 999-9999]
+               </td>
+               <td>
+                  <input id="input" type="text" size="10">
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <input type="button" value="Split" onclick="parseNumber()">
+               </td>
+            </tr>
+            <tr>
+               <td>Area Code:</td>
+               <td>
+                  <input id="areaCode" type="text" size="5">
+               </td>
+            </tr>
+           <tr>
+               <td>First 3 digits:</td>   
+               <td>
+                   <input id="first3" type="text" size="5">
+               </td>
+           </tr>
+           <tr>
+               <td>Last 4 digits:</td>
+                 <td>
+                   <input id="last4" type="text" size="5">
+                 </td>
+               
+            </tr>
+         </table>
+         <input type="reset" value="Reset" onClick="res();">
+      </form>
+</body>
+</html>

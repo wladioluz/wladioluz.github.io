@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homework 5 - part 2</title>
+<meta name="description" content="page with CNT 133 homework number 5 - part 2">
+<script>
+function goToNewPage1(){
+    var myDestination1 = myForm1.destinationList1.options[myForm1.destinationList1.selectedIndex].value;
+    window.location = myDestination1;
+}
+function goToNewPage2(){
+    var myDestination2 = myForm2.destinationList2.options[myForm2.destinationList2.selectedIndex].value;
+    window.location = myDestination2;
+}
+</script>
+</head>
+<body style="background-color:slategrey">
+    <h4><a href="index.html">Home</a>
+        <a href="hw5.html">Back</a> </h4>
+<header><h1>Part 2</h1></header>
+<form name="myForm1">
+    <h3>Choose destination (using onchange event handler)</h3>
+    
+    <select name="destinationList1" onChange="goToNewPage1();">
+    <option>Choose Destination:</option>
+    <option value="http://www.facebook.com/">Facebook</option>
+    <option value="http://www.Instagram.com/">Instagram</option>
+    <option value="http://www.WhatsApp.com/">WhatsApp</option>
+    </select>
+    </form>
+    
+    <br><br>
+    
+    <form name="myForm2">
+    
+    <h3>Choose destination (using onclick event handler)</h3>
+    
+    <select name="destinationList2">
+    <option>Choose Destination:</option>
+    <option value="http://www.facebook.com/">Facebook</option>
+    <option value="http://www.Instagram.com/">Instagram</option>
+    <option value="http://www.WhatsApp.com/">WhatsApp</option>
+    </select>
+    
+    <input type="button" value="Go" onClick="goToNewPage2();">
+    
+    </form>
+</body>
+</html>

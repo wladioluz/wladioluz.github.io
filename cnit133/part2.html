@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 2</title>
+<meta name="description" content="page with CNT 133 homework number 2 Part 2">
+    <script>
+        function process()
+        {
+            var number1, number2, number3, n1, n2, n3, sum;
+            number1=document.forms["myform"].elements["num1"].value;
+            number2=document.forms["myform"].elements["num2"].value;
+            number3=document.forms["myform"].elements["num3"].value;
+            n1=parseInt(number1);
+            n2=parseInt(number2);
+            n3=parseInt(number3);
+            sum=n1+n2+n3;
+            avg=sum/3;
+            min=Math.min(n1,n2,n3);
+            max=Math.max(n1,n2,n3);
+            document.forms["myform"].elements["result"].value=sum;
+            document.forms["myform"].elements["average"].value=avg;
+            document.forms["myform"].elements["minimum"].value=min;
+            document.forms["myform"].elements["maximum"].value=max;
+        }
+    </script>
+    <script>
+        function fade()
+        {
+    $(document).ready(function(){$("button").click(function(){$("sum").fadeTo("slow",0.15);});});
+        }
+    </script>
+    <h4><a href="index.html">Home</a></h4>
+    <h4><a href="hw2.html">Back</a></h4>
+</head>
+<body style="background-color:gray;">
+    <section class="body">
+    <form name="myform">
+        <table>
+            <tr>
+                <td>First Number:</td>
+                <td><input type="number" name="num1" size="10"></td>
+            </tr>
+            <tr>
+                <td>Second Number:</td>
+                <td><input type="number" name="num2" size="10"></td>
+            </tr>
+            <tr>
+                <td>Third Number:</td>
+                <td><input type="number" name="num3" size="10"></td>
+            </tr>
+            <tr>
+                <td>Sum is:</td>
+                <td><input type="text" name="result" size="10" readonly></td>
+            </tr>
+            <tr>
+                <td>Average is:</td>
+                <td><input type="text" name="average" size="10" readonly></td>
+            </tr>
+            <tr>
+                <td>Smalest number is:</td>
+                <td><input type="text" name="minimum" size="10" readonly></td>
+            </tr>
+            <tr>
+                <td>Largest number is:</td>
+                <td><input type="text" name="maximum" size="10"readonly></td>
+            </tr>
+            </table>
+        </table>
+        <input type="button" onclick="process()"value="SUBMIT">
+        <input type="reset" value="RESET">
+        <input type="button" onclick="fade()"value="CLICK TO FADE">
+    </form>
+    </section>
+</body>
+</html>

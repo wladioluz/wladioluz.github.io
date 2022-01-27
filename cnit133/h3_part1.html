@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 1</title>
+<meta name="description" content="page with CNT 133 homework number 3 - part 1">
+<style>.error{color:darkred; font:bold;}</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script>$(document).ready(function(){
+    $("#myform").validate({
+        rules:
+        {
+           hwAvg: {required: true, number:true, min:0, max:100},
+           midExam: {required: true, number:true, min:0, max:100},
+           finalExam: {required: true, number:true, min:0, max:100},
+           participation: {required: true, number:true, min:0, max:100}
+        }
+    });
+});
+function process(){
+    if ($("#myform").valid()){
+            }
+}
+</script>
+<script>
+    function calcFAvg()
+    {
+        var fAvg, hwAvg, midExam, finalExam, participation, hw, mid, fin, part;
+        hwAvg=document.forms["myform"].elements["hwAvg"].value;
+        midExam=document.forms["myform"].elements["midExam"].value;
+        finalExam=document.forms["myform"].elements["finalExam"].value;
+        participation=document.forms["myform"].elements["participation"].value;
+        hw=parseInt(hwAvg);
+        mid=parseInt(midExam);
+        fin=parseInt(finalExam);
+        part=parseInt(participation);
+        fAvg=(.5*hw)+(.2*mid)+(.2*fin)+(.1*part);
+        fAvg=Math.round(fAvg);
+        document.forms["myform"].elements["fAvg"].value=fAvg;
+        if (fAvg<=59){
+            document.forms["myform"].elements["fGra"].value=("F - Student must retake the course");
+        }
+        else if (fAvg>59 && fAvg<=69){
+            document.forms["myform"].elements["fGra"].value=("D - Student must retake the course");
+        }
+        else if (fAvg>69 && fAvg<=79){
+            document.forms["myform"].elements["fGra"].value=("C");
+        }
+        else if (fAvg>79 && fAvg<=89){
+            document.forms["myform"].elements["fGra"].value=("B");
+        }
+        else if (fAvg>89 && fAvg<=100){
+            document.forms["myform"].elements["fGra"].value=("A");
+        }
+        else {
+            document.forms["myform"].elements["fAvg"].value=("");
+            document.forms["myform"].elements["fGra"].value=("");
+        }
+        if (hw<0){
+            document.forms["myform"].elements["fAvg"].value=("");
+            document.forms["myform"].elements["fGra"].value=("");
+        }        
+        else if (hw>100){
+            document.forms["myform"].elements["fAvg"].value=("");
+            document.forms["myform"].elements["fGra"].value=("");
+        }
+        if (mid<0){
+            document.forms["myform"].elements["fAvg"].value=("");
+            document.forms["myform"].elements["fGra"].value=("");
+        }        
+        else if (mid>100){
+            document.forms["myform"].elements["fAvg"].value=("");
+            document.forms["myform"].elements["fGra"].value=("");
+        }
+        if (fin<0){
+            document.forms["myform"].elements["fAvg"].value=("");
+            document.forms["myform"].elements["fGra"].value=("");
+        }        
+        else if (fin>100){
+            document.forms["myform"].elements["fAvg"].value=("");
+            document.forms["myform"].elements["fGra"].value=("");
+        }
+        if (part<0){
+            document.forms["myform"].elements["fAvg"].value=("");
+            document.forms["myform"].elements["fGra"].value=("");
+        }        
+        else if (part>100){
+            document.forms["myform"].elements["fAvg"].value=("");
+            document.forms["myform"].elements["fGra"].value=("");
+        }
+    }
+</script>
+</head>
+<body style="background-color:slategrey">
+    <h4><a href="index.html">Home</a>
+        <a href="hw3.html">Back</a> </h4>
+        <header><h1>Student Grades</h1></header>
+<form id="myform" name="myform">
+    <table>
+        <tr>
+            <td>Homework average</td>
+            <td><input type="number" name="hwAvg"></td>
+        </tr>
+        <tr>
+            <td>Mid-term exam score</td>
+            <td><input type="number" name="midExam"></td>
+        </tr>
+        <tr>
+            <td>Final exam score</td>
+            <td><input type="number" name="finalExam"></td>
+        </tr>
+        <tr>
+            <td>Participation</td>
+            <td><input type="number" name="participation"></td>
+        </tr>
+    </table>
+    <input type="button" onclick="calcFAvg()" value="SUBMIT">
+    <input type="reset" value="RESET"><br>
+    <br>
+    <table>
+        <tr>
+            <th>Final average</th>
+            <td><input type="number" name="fAvg" id="fAvg" readonly></td>
+        </tr>
+        <tr>
+            <th>Final grade</th>
+            <td><input type="text" name="fGra" id="fGra" size="40" readonly></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

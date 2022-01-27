@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homework 5 - part 3</title>
+<meta name="description" content="page with CNT 133 homework number 5 - part 3">
+<script>
+var stateArray = [ ["AL", "Alabama", "Montgomery", "4,887,871"],
+                  ["AK", "Alaska", "Juneau", "737,438"],
+                  ["AZ", "Arizona", "Phoenix", "7,171,646"], 
+                  ["AR", "Arkansas", "Little Rock", "3,010,825"],
+                  ["CA", "California", "Sacramento", "39,557,045"],
+                  ["CO", "Colorado", "Denver", "5,694,564"] ];
+function ButtonPressed()
+{
+    var searchKey=document.forms["SearchForm"].elements["inputState"].value;
+    searchKey=searchKey.toUpperCase();
+
+    var found=false;
+    for (var row=0; row<stateArray.length; row++)
+    {
+        if ((stateArray[row][0]==searchKey) || (stateArray[row][1]==searchKey))
+        {
+            document.forms["SearchForm"].elements["info"].value=stateArray[row][0]+", "+stateArray[row][1]+"\nCapital: "+stateArray[row][2]+"\nPopulation: "+stateArray[row][3];
+            row=stateArray.length;
+            found=true;
+        }
+    }
+    if (found==false){
+        document.forms["SearchForm"].elements["info"].value="Input invalid or state is not listed in the table above";
+    }
+}
+    </script>
+</head>
+<body style="background-color:slategrey">
+<h4><a href="index.html">Home</a>
+    <a href="hw5.html">Back</a> </h4>
+<header><h1>Part 3</h1></header>
+    <table>
+        <tr>
+        <th>State Abbr</th>
+        <th>State Name</th>
+        <th>Capital</th>
+        <th>Population</th>
+        </tr>
+
+        <tr>
+        <td>AL</td>	
+        <td>Alabama</td>	
+        <td>Montgomery</td>		
+        <td>4,887,871</td>	
+        </tr>
+        
+        <tr>
+        <td>AK</td>	
+        <td>Alaska</td>	
+        <td>Juneau</td>		
+        <td>737,438</td>	
+        </tr>
+        
+        <tr>
+        <td>AZ</td>	
+        <td>Arizona</td>	
+        <td>Phoenix</td>		
+        <td>7,171,646</td>	
+        </tr>
+        
+        <tr>
+        <td>AR</td>	
+        <td>Arkansas</td>	
+        <td>Little Rock</td>		
+        <td>3,010,825</td>	
+        </tr>
+
+        <tr>
+        <td>CA</td>	
+        <td>California</td>	
+        <td>Sacramento</td>		
+        <td>39,557,045</td>	
+        </tr>
+
+        <tr>
+        <td>CO</td>	
+        <td>Colorado</td>	
+        <td>Denver</td>		
+        <td>5,694,564</td>	
+        </tr>
+
+        </table>
+        
+        <br>
+        <p><b>Enter a state name (full or just the two characters that represent the state):</b></p>
+
+        <form name="SearchForm">
+        <input type="text" size="15" name="inputState" autofocus> 
+        <input onclick="ButtonPressed();" type="button" value="State Info" name="search" id="search">
+        
+        <br><br>
+        
+        State Info:<br>
+        <textarea rows="4" name="info" id="info" readonly></textarea><br><br>
+        <input type="reset" value="Reset" onclick="location.reload();">
+        </form>
+        
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 3</title>
+<meta name="description" content="page with CNT 133 homework number 2 part 3">
+<script>
+    function process()
+    {
+        var number1, number2, number3, number4, number5, n1, n2, n3, n4, n5;
+        number1=document.forms["myform"].elements["num1"].value;
+        number1=document.forms["myform"].elements["num2"].value;
+        number1=document.forms["myform"].elements["num3"].value;
+        number1=document.forms["myform"].elements["num4"].value;
+        number1=document.forms["myform"].elements["num5"].value;
+        n1=parseInt(number1);
+        n2=parseInt(number2);
+        n3=parseInt(number3);
+        n4=parseInt(number4);
+        n5=parseInt(number5);
+    }
+</script>
+<script>
+    function neg()
+    {
+    var countNegatives=function(grid){
+        let count=0
+        for(i=grid.length-1;i>=0;i--){
+            for(j=grid[i].length-1;j>=0;j--){
+                if(Math.sign(grid[i][j])===-1)count++
+                else break
+            }
+        }
+        return count    
+    }};
+</script>
+<h4><a href="index.html">Home</a></h4>
+<h4><a href="hw2.html">Back</a></h4>
+</head>
+<body style="background-color:gray;">
+<table>
+<tr>
+<td>First Number:</td>
+<td><input type="number" name="n1" size="10"></td>
+</tr>
+<tr>
+<td>Second Number:</td>
+<td><input type="number" name="n2" size="10"></td>
+</tr>
+<tr>
+<td>Third Number:</td>
+<td><input type="number" name="n3" size="10"></td>
+</tr>
+<tr>
+<td>Fourth Number:</td>
+<td><input type="number" name="n4" size="10"></td>
+</tr>
+<tr>
+<td>Fifth Number:</td>
+<td><input type="number" name="n5" size="10"></td>
+</tr>
+<tr>
+<td>Negative Numbers:</td>
+<td><input type="text" name="countNegatives" size="10" readonly></td>
+</tr>
+<tr>
+<td>Positive Numbers:</td>
+<td><input type="text" name="??" size="10" readonly></td>
+</tr>
+<tr>
+<td>Number of Zeros:</td>
+<td><input type="text" name="??" size="10" readonly></td>
+</tr>
+</table>
+<div id="results"></div>    
+<br><br>
+<input type="button" onclick="process(); document.forms['myform'].elements['num1'].focus();" value="SUBMIT">
+<input type="reset" value="RESET" onclick="res()">
+</form>
+</body>
+</html>

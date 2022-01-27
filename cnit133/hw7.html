@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homework 7</title>
+<meta name="description" content="page with CNT 133 homework number 7">
+<h4><a href="index.html">Home</a></h4>
+<header><h1 style="color: white">CNIT 133 Homework 7 - Object Model and Event Model</h1></header>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.answer').hide();
+    $('.main h2').toggle(
+        function(){
+            $(this).next('.answer').slideDown();
+            $(this).addClass('close');
+        },
+        function(){
+            $(this).next('.answer').fadeOut();
+            $(this).removeClass('close');
+        }
+    );
+});
+</script>
+</head>
+<body style="background-image:url('background.jpeg')";>
+    <div class="wrapper">
+    <div class="content">
+        <div class="main">
+            <h2>Part 1</h2>
+            <div class="answer">
+                <p style="color: white;">Webpage, in which users are allowed to select a page layout and formatting through the use of the className property</p>
+                <p><a href="h7_part1.html">link</a></p>
+            </div>
+            <h2>Part 2</h2>
+            <div class="answer">
+                <p style="color: white;">Navigation bar with links to all Homeworks done</p>
+                <p><a href="h7_part2.html">link</a></p>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homework 5 - part 1</title>
+<meta name="description" content="page with CNT 133 homework number 5 - part 1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#myform").validate({
+        messages:{
+            name:"Please, enter your name",
+            mood:"Please, choose a mood",
+            team:"Please, choose at least one team",
+            res:"Please, choose a residence"
+        },
+        errorPlacement: function(error, element){
+            if(element.is(":radio") || element.is(":checkbox")){
+                error.appendTo(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        }
+    });
+});
+</script>
+</head>
+<body style="background-color:slategrey">
+    <h4><a href="index.html">Home</a>
+    <a href="hw5.html">Back</a> </h4>
+<header><h1>Part 1</h1></header>
+<table>
+    <tr>
+        <td>
+            <form action="formOK.html" method="post" id="myform" name="myform">
+                <tabel>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" name="name" id="name" size="20" class="required" autofocus></td>
+                    </tr>
+                    <tr>
+                    <td>Rate your mood today:</td>
+                    <td>Good :)<input type="radio" id="mood1" name="mood" class="required" value="good">
+                    Bad :(<input type="radio" id="mood2" value="poor" name="mood"></td>
+                    </tr>
+                    <tr>
+                        <td>Favorite NBA team:</td>
+                        <td>Golden State Warriors<input type="checkbox" id="team1" name="team" value="Warriors" class="required">
+                            Los Angeles Lakers<input type="checkbox" id="team2" name="team" value="Lakers" class="required">
+                        </td>
+                    </tr>
+                    <tr>
+                    <td><label for="res" class="label">Residence:</label></td>
+                    <td>
+                        <select name="res" id="res" class="required">
+                            <option value="">-Choose one-</option>
+                            <option value="BayArea">Bay Area</option>
+                            <option value="LA">Los Angeles</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" id="submit_button" value="SUBMIT" onclick=window.alert("Success")></td>
+                        <td><input type="reset" value="RESET" onclick=window.location.reload()></td>
+                    </tr>
+                </tabel>
+            </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

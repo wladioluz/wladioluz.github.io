@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 3</title>
+<meta name="description" content="page with CNT 133 homework number 3 - part 3">
+<script>
+    function ctf() {
+        var C, c, F;
+        C=document.forms["myform"].elements["inputbox"].value;
+        c=parseInt(C);
+        F=(9/5*c)+32
+        F=Math.round(F);
+        document.forms["myform"].elements["outputbox"].value=(F);
+    } 
+    function ftc() {
+        var F, f, C;
+        F=document.forms["myform"].elements["inputbox"].value;
+        f=parseInt(F);
+        C=5/9*(f-32)
+        C=Math.round(C);
+        document.forms["myform"].elements["outputbox"].value=C;
+    }
+</script>
+</head>
+<h4><a href="index.html">Home</a>
+    <a href="hw3.html">Back</a> </h4>
+    <header><h1>Temperature convertor</h1></header>
+<body style="background-color:slategrey">
+<p>Please enter temperature you want to convert bellow:</p>
+<form name="myform">
+    <tr>
+        <td><input type="number" name="inputbox"></td>
+    </tr> <br>
+    <input type="button" onclick="ctf()" value="C to F">
+    <input type="button" onclick="ftc()" value="F to C">
+    <br><br>
+    <tr>
+        <td>Result:</td>
+        <td><input type="number" name="outputbox" readonly></td>
+    </tr>
+</form>
+</body>
+</html>

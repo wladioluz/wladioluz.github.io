@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homework 7 - part 2</title>
+<link rel="stylesheet" href="css/style.css">
+<meta name="description" content="page with CNT 133 homework number 7 - part 2">
+<style>
+nav {background:rgb(73, 73, 73); float:left; text-align: center;}
+nav ul li {float:left; display:inline;}
+nav ul li a {display:block; padding:15px 25px; color:rgb(197, 197, 197); text-decoration:none; }
+nav ul li ul {position:absolute; width:120px; background:#444;}
+nav ul li ul li {width:120px;}
+nav ul li ul li a {display:block; padding:15px 10px; color:#FFF;}
+nav ul li ul li:hover a {background:#D1D1D1; color:#F00;}
+nav ul li ul.fallback {display:none;}
+nav ul li:hover ul.fallback {display:block;}
+</style>
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+$('nav li ul').hide().removeClass('fallback');
+$('nav li').hover(
+  function () {
+    $('ul', this).stop().slideDown(200);
+  },
+  function () {
+    $('ul', this).stop().slideUp(200);
+  }
+);
+});
+</script>
+</head>
+<body style="background-color:slategrey">
+    <h4><a href="index.html">Home</a>
+    <a href="hw7.html">Back</a> </h4>
+<header><h1>Part 2 - Navigation Bar</h1></header>
+<nav>
+    <ul>
+      <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/index.html">Homework 1</a></li>
+      <li>
+        <a href="https://hills.ccsf.edu/~wpylypcz/cnit133/hw2.html">Homework 2</a>
+        <ul class="fallback">
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/part1.html">Part 1</a></li>
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/part2.html">Part 2</a></li>
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/part3.html">Part 3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://hills.ccsf.edu/~wpylypcz/cnit133/hw3.html">Homework 3</a>
+        <ul class="fallback">
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h3_part1.html">Part 1</a></li>
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h3_part2.html">Part 2</a></li>
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h3_part3.html">Part 3</a></li>
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h3_part4.html">Part 4</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://hills.ccsf.edu/~wpylypcz/cnit133/hw4.html">Homework 4</a>
+        <ul class="fallback">
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h4_part1.html">Part 1</a></li>
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h4_part2.html">Part 2</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://hills.ccsf.edu/~wpylypcz/cnit133/hw5.html">Homework 5</a>
+        <ul class="fallback">
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h5_part1.html">Part 1</a></li>
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h5_part2.html">Part 2</a></li>
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h5_part3.html">Part 3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://hills.ccsf.edu/~wpylypcz/cnit133/hw6.html">Homework 6</a>
+        <ul class="fallback">
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h6_part1.html">Part 1</a></li>
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h6_part2.html">Part 2</a></li>
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h6_part3.html">Part 3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://hills.ccsf.edu/~wpylypcz/cnit133/hw7.html">Homework 7</a>
+        <ul class="fallback">
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h7_part1.html">Part 1</a></li>
+          <li><a href="https://hills.ccsf.edu/~wpylypcz/cnit133/h7_part2.html">Part 2</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>

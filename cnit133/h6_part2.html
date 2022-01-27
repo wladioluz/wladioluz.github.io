@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homework 6 - part 2</title>
+<meta name="description" content="page with CNT 133 homework number 6 - part 2">
+<script> 
+function search()
+         {
+            var count=0;
+            
+            var key=document.getElementById("key").value.toLowerCase().charAt( 0 );
+             var key=key.toLowerCase();
+            var text = document.getElementById("enteredText").value;
+            var stringToSearch=text;
+            var stringToSearch=stringToSearch.toLowerCase(); 
+  
+                        
+             for (i=0; i < stringToSearch.length; i++)
+                     {
+
+                    if (stringToSearch.charAt(i) == key)
+                             count++;     
+                     }         
+      
+            if ( count == 0 )
+               document.getElementById("output").value="'" + key + "'" + " not found";
+            else
+               document.getElementById("output").value=count + 
+                  " occurrence(s) of " + "'" + key + "'" + " found";
+         }
+</script>
+</head>
+<body style="background-color:slategrey" onload="document.getElementById('key').focus();">
+    <h4><a href="index.html">Home</a>
+    <a href="hw6.html">Back</a> </h4>
+<header><h1>Part 2 - Search</h1></header>
+<form name="myForm">
+    <p>Enter your text here
+    <textarea cols="30" rows="1" id="enteredText"></textarea> 
+    </p>
+    <p>   
+    Enter a character to search for
+       <input id="key" type="text" size="5">
+       <input type="button" value="Search" onclick="search();">
+        <input type="reset" value="Reset" onClick="location.reload();">
+
+    <br><br>
+    
+        Occurrences of search character in written text:
+       <textarea cols="30" rows="1" id="output" readonly></textarea>
+    </p>
+ </form>
+</body>
+</html>

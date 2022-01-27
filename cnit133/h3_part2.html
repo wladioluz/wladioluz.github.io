@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 2</title>
+<meta name="description" content="page with CNT 133 homework number 3 - part 2">
+<style>.error{color:darkred; font:bold;}</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script>$(document).ready(function(){
+    $("#myform").validate({
+        rules:
+        {
+           it1: {required: true, number:true, min:0},
+           it2: {required: true, number:true, min:0},
+           it3: {required: true, number:true, min:0},
+           it4: {required: true, number:true, min:0}
+        }
+    });
+});
+function processs(){
+    if ($("#myform").valid()){
+            }
+}
+</script>
+<script>
+    function process() {
+        var it1, it2, it3, it4, i1, i2, i3, i4, n1, n2, n3, n4, t1, t2, t3, t4, totAS, totWE;
+        it1=document.forms["myform"].elements["it1"].value;
+        it2=document.forms["myform"].elements["it2"].value;
+        it3=document.forms["myform"].elements["it3"].value;
+        it4=document.forms["myform"].elements["it4"].value;
+        i1=parseInt(it1);
+        i2=parseInt(it2);
+        i3=parseInt(it3);
+        i4=parseInt(it4);
+        n1=i1
+        n2=i2
+        n3=i3
+        n4=i4
+        document.forms["myform"].elements["n1"].value=n1;
+        document.forms["myform"].elements["n2"].value=n2;
+        document.forms["myform"].elements["n3"].value=n3;
+        document.forms["myform"].elements["n4"].value=n4;
+        t1=n1*239.99
+        t2=n2*129.75
+        t3=n3*99.95
+        t4=n4*350.89
+        t1=Math.round(t1*100)/100
+        t2=Math.round(t2*100)/100
+        t3=Math.round(t3*100)/100
+        t4=Math.round(t4*100)/100
+        document.forms["myform"].elements["t1"].value=t1;
+        document.forms["myform"].elements["t2"].value=t2;
+        document.forms["myform"].elements["t3"].value=t3;
+        document.forms["myform"].elements["t4"].value=t4;
+        totAS=t1+t2+t3+t4
+        totAS=Math.round(totAS*100)/100
+        document.forms["myform"].elements["totAS"].value=totAS;
+        totWE=200+(totAS*.09)
+        totWE=Math.round(totWE*100)/100
+        document.forms["myform"].elements["totWE"].value=totWE;
+        if (i1<0){
+            alert("Number of sold items cannot be negative!")
+            document.forms["myform"].elements["n1"].value=("");
+            document.forms["myform"].elements["t1"].value=("");
+            document.forms["myform"].elements["n2"].value=("");
+            document.forms["myform"].elements["t2"].value=("");
+            document.forms["myform"].elements["n3"].value=("");
+            document.forms["myform"].elements["t3"].value=("");
+            document.forms["myform"].elements["n4"].value=("");
+            document.forms["myform"].elements["t4"].value=("");
+            document.forms["myform"].elements["totAS"].value=("");
+            document.forms["myform"].elements["totWE"].value=("");
+        }
+        else if (i2<0){
+            alert("Number of sold items cannot be negative!")
+            document.forms["myform"].elements["n1"].value=("");
+            document.forms["myform"].elements["t1"].value=("");
+            document.forms["myform"].elements["n2"].value=("");
+            document.forms["myform"].elements["t2"].value=("");
+            document.forms["myform"].elements["n3"].value=("");
+            document.forms["myform"].elements["t3"].value=("");
+            document.forms["myform"].elements["n4"].value=("");
+            document.forms["myform"].elements["t4"].value=("");
+            document.forms["myform"].elements["totAS"].value=("");
+            document.forms["myform"].elements["totWE"].value=("");
+        }
+        else if (i3<0){
+            alert("Number of sold items cannot be negative!")
+            document.forms["myform"].elements["n1"].value=("");
+            document.forms["myform"].elements["t1"].value=("");
+            document.forms["myform"].elements["n2"].value=("");
+            document.forms["myform"].elements["t2"].value=("");
+            document.forms["myform"].elements["n3"].value=("");
+            document.forms["myform"].elements["t3"].value=("");
+            document.forms["myform"].elements["n4"].value=("");
+            document.forms["myform"].elements["t4"].value=("");
+            document.forms["myform"].elements["totAS"].value=("");
+            document.forms["myform"].elements["totWE"].value=("");
+        }
+        else if (i4<0){
+            alert("Number of sold items cannot be negative!")
+            document.forms["myform"].elements["n1"].value=("");
+            document.forms["myform"].elements["t1"].value=("");
+            document.forms["myform"].elements["n2"].value=("");
+            document.forms["myform"].elements["t2"].value=("");
+            document.forms["myform"].elements["n3"].value=("");
+            document.forms["myform"].elements["t3"].value=("");
+            document.forms["myform"].elements["n4"].value=("");
+            document.forms["myform"].elements["t4"].value=("");
+            document.forms["myform"].elements["totAS"].value=("");
+            document.forms["myform"].elements["totWE"].value=("");
+        }
+    }
+</script>
+</head>
+<body style="background-color:slategrey">
+    <h4><a href="index.html">Home</a>
+        <a href="hw3.html">Back</a> </h4>
+        <header><h1>Commissions</h1></header>
+<form id="myform" name="myform">
+    <table>
+        <tr>
+            <td><label for="Salesperson">Salesperson </label><input id="Salesperson" title="Please make sure that the salesperson's name is spelled correctly"></td> 
+        </tr>
+        </table>
+        <table>
+            <h2>Input the number of items sold for each item number:</h2>
+            <tr>
+                <td>Item 1:</td>
+                <td><input type="number" name="it1"></td>
+            </tr>
+            <tr>
+                <td>Item 2:</td>
+                <td><input type="number" name="it2"></td>
+            </tr>
+            <tr>
+                <td>Item 3:</td>
+                <td><input type="number" name="it3"></td>
+            </tr>
+            <tr>
+                <td>Item 4:</td>
+                <td><input type="number" name="it4"></td>
+            </tr>
+        </table>
+    <input type="button" onclick="process()" value="SUBMIT">
+    <input type="reset" value="RESET"><br>
+    <table>
+        <tr>
+            <th>Item #</th>
+            <th>Price</th>
+            <th>Number Sold</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;">1</td>
+            <td>$239.99</td>
+            <td><input type="number" name="n1" readonly></td>
+            <td><input type="number" name="t1" readonly></td>    
+        </tr>    
+        <tr>
+            <td style="text-align: center;">2</td>
+            <td>$129.75</td>
+            <td><input type="number" name="n2" readonly></td>
+            <td><input type="number" name="t2" readonly></td>    
+        </tr>  
+        <tr>
+            <td style="text-align: center;">3</td>
+            <td>$99.95</td>
+            <td><input type="number" name="n3" readonly></td>
+            <td><input type="number" name="t3" readonly></td>    
+        </tr>  
+        <tr>
+            <td style="text-align: center;">4</td>
+            <td>$350.89</td>
+            <td><input type="number" name="n4" readonly></td>
+            <td><input type="number" name="t4" readonly></td>    
+        </tr>  
+        <tr>
+            <td>Total Amount Sold:</td>
+            <td></td>
+            <td></td>
+            <td><input type="number" name="totAS" readonly></td>
+        </tr>
+        <tr>
+            <td>Total Weekly Earnings:</td>
+            <td></td>
+            <td></td>
+            <td><input type="number" name="totWE" readonly></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Part 4</title>
+<meta name="description" content="page with CNT 133 homework number 3 - part 4">
+<script>
+    function random(){
+        var rand1, rand2;
+        rand1=Math.floor(Math.random()*10)+1;
+        rand2=Math.floor(Math.random()*10)+1;
+        document.forms["myform"].elements["random1"].value=rand1;
+        document.forms["myform"].elements["random2"].value=rand2;
+        }
+    function checking(){
+        var rand1, rand2, ans;
+        rand1=document.forms["myform"].elements["random1"].value;
+        rand2=document.forms["myform"].elements["random2"].value;
+        ans=document.forms["myform"].elements["answer"].value;
+        if (ans==(rand1*rand2)){
+            document.forms["myform"].elements["answer"].value=("")
+            tryagain()
+        }
+        else {
+            document.forms["myform"].elements["comment"].value=("No, please try again.")
+            document.forms["myform"].elements["answer"].value=("")
+        }
+    }
+    function tryagain(){
+        if (confirm("Very good! Do you want another challenge?")){
+            random()
+            document.forms["myform"].elements["comment"].value=("");
+        }
+        else {
+            document.forms["myform"].elements["random1"].value=("");
+            document.forms["myform"].elements["random2"].value=("");
+            document.forms["myform"].elements["comment"].value=("");
+        }
+        }
+</script>
+</head>
+<body style="background-color:slategrey">
+    <h4><a href="index.html">Home</a>
+        <a href="hw3.html">Back</a> </h4>
+        <header><h1>Multiplication</h1></header>
+<p>Hi there! This program will help you to learn multiplication. Once you are ready, press "GENERATE" to show the new task for you, then type your answer into the box and confirm with "SUBMIT" button.</p>
+<input type="button" onclick="random()" value="GENERATE">
+<form name="myform">
+    <tr>
+        <td>How much is</td>
+        <td><input type="number" name="random1" readonly></td>
+        <td>times</td>
+        <td><input type="number" name="random2" readonly></td>
+        <td>?</td>
+    </tr>
+    <tr><br><br>
+        <td>Answer</td>
+        <td><input type="number" name="answer"></td>
+        <input type="button" name="submit" onclick="checking()" value="SUBMIT">
+        <br>System comment<input type="text" name="comment" readonly>
+    </tr>
+</form>
+</body>
+</html>

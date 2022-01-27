@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homework 4 - part 1</title>
+<meta name="description" content="page with CNT 133 homework number 4 - part 1">
+<h4><a href="index.html">Home</a>
+    <a href="hw4.html">Back</a> </h4>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script>
+    $(function() {
+       $( "#draggable" ).draggable();
+    });
+    </script>
+</head>
+<body style="background-color:slategrey">
+<header><h1>Part 1a&b</h1></header>
+<script>
+    var prod=1;
+    for (var number=5; number<=21; number+=4)
+    {
+        prod*=number;
+    }
+    document.write("The <b>product</b> of the every fourth integer between 5 and 21 inclusive is " + prod);
+    var sum=0;
+    for (var number=5; number<=21; number+=4)
+    {
+        sum+=number;
+    }
+    document.write("<br>The <b>sum</b> of the every fourth integer between 5 and 21 inclusive is " + sum);
+</script>
+<p id="draggable" style="background-color: orange; width: fit-content;"><b>This is a draggable paragraph<b></p>
+</body>
+</html>
