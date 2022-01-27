@@ -4,3 +4,8 @@ h1 {
 h3 {
     text-align: center;
 }
+img {
+    width: 200px;
+    height: auto;
+    vertical-align: middle;
+}
