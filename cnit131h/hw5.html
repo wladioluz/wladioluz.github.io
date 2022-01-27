@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Homework number 5</title>
+<meta name="description" content="CNIT131H Homework number 5">
+</head>
+<body style="background-image:url('bg10.jpeg'); background-color: rgb(197, 224, 247); background-size: cover;">
+    <header>
+        <h1 style="text-align:center">Homework number 5</h1>
+    </header>
+    <main>
+        <article>
+            <h2 style="text-align: right; font-style: italic;">Heading number 2</h2>
+                <p><span style="font-size: 1.5em;">T</span>his is paragraph number 1</p>
+                <p><span style="font-size: 1.5em;">A</span>nd this is paragraph number 2</p>
+                <p>The below is a random link script, for <strong>Extra Credit</strong>, that will randomly choose between the specified pool of CCSF-related urls to visit after pressing the button.</p>
+        </article>
+            <script>
+                /*
+                Random link button- By JavaScript Kit (http://javascriptkit.com)
+                Over 300+ free scripts!
+                This credit MUST stay intact for use
+                */
+                
+                //specify random links below. You can have as many as you want
+                var randomlinks=new Array()
+                
+                randomlinks[0]="https://www.ccsf.edu/"
+                randomlinks[1]="https://www.ccsf.edu/academics/schools/stem/computer-networking-and-information-technology-department-cnit"
+                randomlinks[2]="https://library.ccsf.edu/"
+                randomlinks[3]="https://www.ccsf.edu/computer-labs"
+                randomlinks[4]="https://www.ccsf.edu/paying-college/financial-aid-office/how-apply-financial-aid"
+                
+                function randomlink(){
+                window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
+                }
+                //-->
+                </script>
+                <form method="post">
+                <p><input type="button" name="B1" value="Random Link >>" onclick="randomlink()"></p> </form>
+                
+                <!--Uncomment below to use a regular text link instead
+                <a href="javascript:randomlink()">Random Link</a>
+                -->
+    </main>
+    <footer style="background-image: url('wallpaper.jpeg'); background-repeat: repeat-x; background-position:top; border:5px solid blue;">
+        <p>This is the footer's paragraph number 1</p>
+        <p>This is the footer's paragraph number 2</p>
+        <p>This is the footer's paragraph number 3</p>
+        <p>This is the footer's paragraph number 4</p>
+        <p>This is the footer's paragraph number 5</p>
+    </footer>
+</body>
+</html>
