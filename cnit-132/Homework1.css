@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+img {
+    vertical-align: middle;
+}
+body {
+    background-color: black;
+    color: white;
+}
+footer {
+font-style: italic;
+font-size: 17px;
+text-align: center;
+}
