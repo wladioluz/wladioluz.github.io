@@ -44,23 +44,7 @@
 		font-size:11px;	/* this makes all anchor classes with .list applied 11px tall  */
 	}
 				
-	div#footer{
-		background-color:#c4d5d9;
-		margin:0 auto;
-		padding:15px;
-		text-align:center;
-		width:900px;
-	}
-	.float-left{
-		float:left;	/* use this on an element (like an image) to make it float to the left of it's containing HTML element */
-		margin:0  10px 10px 0;
-	}
-	.float-right{
-		float:right;	/* use this on an element (like an image) to make it float to the right of it's containing HTML element */
-	}
-	.float-right img{
-		margin:0 0 10px 10px;	/* use this on an element (like an image) to make it float to the right of it's containing HTML element */
-	}
+	
 	
 	@media screen and (min-width: 601px){
 		body{
@@ -114,17 +98,34 @@
 						text-decoration:none
 					}	/* when hovering over a link, in the sidebar, this turns off the underline */
 					
-
+					.float-left{
+						float:left;	/* use this on an element (like an image) to make it float to the left of it's containing HTML element */
+						margin:0  10px 10px 0;
+					}
+					.float-right{
+						float:right;	/* use this on an element (like an image) to make it float to the right of it's containing HTML element */
+					}
+					.float-right img{
+						margin:0 0 10px 10px;	/* use this on an element (like an image) to make it float to the right of it's containing HTML element */
+					}
+					div#footer{
+						background-color:#c4d5d9;
+						margin:0 auto;
+						padding:15px;
+						text-align:center;
+						width:900px;
+					}
 	}	
 	.clear{
 		clear:both; /* this clears floats.  This would be used to cancel out a float's behavior on content below it.  */
 	}	
-	
+
 	@media screen and (max-width: 600px) {
 		body{
 			background:#eaf8fb;	/* a light blue background color. */
 			font-family:Arial, Helvetica, sans-serif; /* the font family for all text on the web page is now either arial, helvetica or a sans-serif font if those two are not available */
 			font-size:100%; /* all normal text on the web page has a base font size of 14px now */
+			
 		}
 		p{
 			letter-spacing:100%; /* letter spacing sets the horizontal spacing (kerning) between letters in a block of text. */
@@ -151,4 +152,12 @@
 					ul.navigation {
 						list-style:none;	/* this removes the bullets from list elements */
 					}
+					div#footer{
+						background-color:#c4d5d9;
+						margin:0 auto;
+						padding:15px;
+						text-align:left;
+						width:900px;
+					}					
 	}
+	
