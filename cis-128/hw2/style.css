@@ -3,47 +3,6 @@
 	}
 		/*the above is a very basic reset rule.  Every browser has a slightly different default for HTML tags.  By using this simple CSS reset, all the more glaring styles 
 		are reset and can now be set to whatever properties that would suit your website best. */
-						
-	ul.navigation li{
-		display:inline-block; /* an inline block element can have width and height applied to it / and if not, they only take up as much space as the content within allows */
-		margin:0 3px 5px;	/* this code adds a 3px margin to the left and right of the list elements, and 5px to the bottom of the list elements */
-					}
-					
-	ul.navigation li a{
-		background:#4a4a4a;	/* this is a dark grey background for the link */
-		color:#fff;	/* this makes the link text white */
-		-moz-border-radius:2px; 
-		-webkit-border-radius:2px; 
-		border-radius:2px;	/* these 3 lines of border-radius code make rounded corners work in firefox, safari, chrome, opera and IE9 */
-		border:1px solid #595959; /* this adds a light grey solid border of 1px width around the link */
-		padding:3px 10px;	/* as the name implies, this adds extra padding around the link, so that the borders don't bump up against the link text */
-		text-decoration:none; /* this removes the normal underline that links usually have */
-	}
-						
-	ul.navigation li a:hover{
-		background-color:#000; /*this is a hover pseudo class.  By designating a different background color, than the class for the a tag above, when a mouse hovers over these particular links, in the navigation bar, the background color will change to what's defined here */
-		
-	}
-	
-	div.content{
-		margin:15px auto; /* this adds a margin of 15px to the top and bottom of the div with the class of content.  The auto margin applies to the left and right side of the div which is what centers the div in the middle of the page. */
-		width:900px;
-	}
-				
-	
-	.list{
-		border-bottom:1px solid #c3dce1; /* adds a border to the bottom of the list to further divide the content for eaier segragation */
-		padding:0 0 20px 15px;	/* adds spacing to the bottom of the list to further divide the content for eaier segragation */
-	}
-	.list li{
-		margin-bottom:10px
-	}
-	.list li a{
-		font-weight:bold;	/* this makes all anchor classes with .list bold without using <strong>  */
-		text-transform:uppercase;	/* this makes all anchor classes with .list uppercase  */
-		font-size:11px;	/* this makes all anchor classes with .list applied 11px tall  */
-	}
-				
 	
 	
 	@media screen and (min-width: 601px){
@@ -116,6 +75,49 @@
 						width:900px;
 					}
 	}	
+	ul.navigation li{
+		display:inline-block; /* an inline block element can have width and height applied to it / and if not, they only take up as much space as the content within allows */
+		margin:0 3px 5px;	/* this code adds a 3px margin to the left and right of the list elements, and 5px to the bottom of the list elements */
+					}
+					ul.navigation li a{
+						background:#4a4a4a;	/* this is a dark grey background for the link */
+						color:#fff;	/* this makes the link text white */
+						-moz-border-radius:2px; 
+						-webkit-border-radius:2px; 
+						border-radius:2px;	/* these 3 lines of border-radius code make rounded corners work in firefox, safari, chrome, opera and IE9 */
+						border:1px solid #595959; /* this adds a light grey solid border of 1px width around the link */
+						padding:3px 10px;	/* as the name implies, this adds extra padding around the link, so that the borders don't bump up against the link text */
+						text-decoration:none; /* this removes the normal underline that links usually have */
+					}
+					
+	div.content{
+		margin:15px auto; /* this adds a margin of 15px to the top and bottom of the div with the class of content.  The auto margin applies to the left and right side of the div which is what centers the div in the middle of the page. */
+		width:900px;
+	}
+				
+	
+	.list{
+		border-bottom:1px solid #c3dce1; /* adds a border to the bottom of the list to further divide the content for eaier segragation */
+		padding:0 0 20px 15px;	/* adds spacing to the bottom of the list to further divide the content for eaier segragation */
+	}
+	.list li{
+		margin-bottom:10px
+	}
+	.list li a{
+		font-weight:bold;	/* this makes all anchor classes with .list bold without using <strong>  */
+		text-transform:uppercase;	/* this makes all anchor classes with .list uppercase  */
+		font-size:11px;	/* this makes all anchor classes with .list applied 11px tall  */
+	}
+				
+						
+					
+
+						
+	ul.navigation li a:hover{
+		background-color:#000; /*this is a hover pseudo class.  By designating a different background color, than the class for the a tag above, when a mouse hovers over these particular links, in the navigation bar, the background color will change to what's defined here */
+		
+	}
+	
 	.clear{
 		clear:both; /* this clears floats.  This would be used to cancel out a float's behavior on content below it.  */
 	}	
