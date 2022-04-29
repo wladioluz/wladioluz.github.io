@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="using Semantic UI">
+  
+  <title>Products</title>
+
+  <link rel="stylesheet" href="Semantic-UI-CSS-master/semantic.min.css"> 
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+  <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+  <script>
+    $(document).ready(function(){
+       $('.ui.accordion').accordion();
+    });
+</script>
+
+  <style>
+    h1{
+      padding-top: 1em;
+    }
+    .ui.item {
+      background-color: yellow;
+    }
+
+    p {
+        color: black;
+    }
+
+  </style>
+
+</head>
+
+<main>
+  <div class="ui top fixed five item menu">
+    <a class=" item" href="Index.html">
+      Main
+    </a>
+    <a class="active item" href="Products.html">
+      Products
+    </a>
+    <a class="item" href="Location.html">
+      Location
+    </a>
+    <a class="item" href="Extra.html">
+      Extra
+    </a>
+    <a class="item" href="ContactUs.html">
+      Contact Us
+    </a>
+  </div>
+
+  <h2>Product catalog</h2>
+
+  <div class="ui styled accordion">
+
+      <div class="title">
+         <i class="info circle icon"></i>
+            Toy 1 - Spider Man
+      </div>
+      <div class="content">
+          <p>Imagine Peter Parker suiting up as the friendly, neighborhood Spider-Man with this 12-inch-scale Spider-Man figure, inspired by the classic character design from the Marvel Universe.</p>
+          <img src="sm.jpeg" alt="Spider Man figure">  
+        </div>
+
+        <div class="title">
+            <i class="info circle icon"></i>
+               Toy 2 - Batman
+         </div>
+         <div class="content">
+             <p>This articulated action figure is highly detailed, featuring a cloth cape and authentic comic styling that brings your favorite BATMAN Super Heroes and Super-Villains to life!</p>
+             <img src="bt.jpeg" alt="Batman figure">  
+           </div>
+           
+           
+           <div class="title">
+            <i class="info circle icon"></i>
+               Toy 3 - Falcon
+         </div>
+         <div class="content">
+             <p>Imagine Sam Wilson flying into battle with this 12-inch-scale Captain America figure, inspired by the character design from Marvel Studios' The Falcon and the Winter Soldier.</p>
+             <img src="flc.jpeg" alt="Falcon figure">  
+           </div> 
+  </div>    
+</main>
+</html>
