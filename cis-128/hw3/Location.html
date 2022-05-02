@@ -14,17 +14,47 @@
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
   <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+  <script>
+      function getloc() {
+          navigator.geolocation.getCurrentPosition(showPosition, if_error);
+          }
+
+          function showPosition(position){
+            var latlon=position.coords.latitude+","+position.coords.longitude;
+
+            var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+            +latlon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyB2VzLo5yYoEP2Kgx0-X2tDVuuHOb8WO2g";
+            
+            document.getElementById("location").innerHTML=latlon;
+            document.getElementById("mapholder").innerHTML="<img src='"+img_url+"'>";
+          }
+          
+          function if_error(err) {
+              if(err.code==1){alert('User Denied');}
+              if(err.code==2){alert('Position unavailable');}
+              if(err.code==3){alert('Timeout');}
+          }
+
+          
+
+  </script>  
 
   <style>
-    h1{
-      padding-top: 1em;
+    #location{
+      padding-top: 2em;
     }
     .ui.item {
       background-color: yellow;
     }
+    #mapholder {
+      padding-top: 2.5em;  
+    }
+
   </style>
 
 </head>
+
+<body onload="getloc()">
 
 <main>
   <div class="ui top fixed five item menu">
@@ -45,4 +75,8 @@
     </a>
   </div>
 
+  <div id="location"></div>
+  <div id="mapholder"></div>
 </main>
+</body>
+</html>

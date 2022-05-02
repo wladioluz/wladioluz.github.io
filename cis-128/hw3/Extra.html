@@ -16,12 +16,19 @@
   <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
 
   <style>
-    h1{
-      padding-top: 1em;
-    }
     .ui.item {
       background-color: yellow;
     }
+
+    dd {
+        padding-bottom: 2em;
+    }
+
+    dt {
+        font-weight:bold;
+        font-size: larger;
+    }
+
   </style>
 
 </head>
@@ -45,4 +52,17 @@
     </a>
   </div>
 
-  </main>
+  <h2>WURFL capabilities</h2>
+
+  <div>
+        <dl>
+            <dt>complete_device_name</dt>
+            <dd>Concatenates brand name, model name and marketing name (where available) of a device into a single string.</dd>
+            <dt>bluetooth</dt>
+            <dd>Returns true if the device has bluetooth capabilities.</dd>
+            <dt>can_assign_phone_number</dt>
+            <dd>True if device is a mobile phone and may have a phone number associated to it.</dd>
+          </dl>
+  </div>        
+</main>
+</html>
