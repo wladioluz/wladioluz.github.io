@@ -25,7 +25,7 @@
             var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
             +latlon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyB2VzLo5yYoEP2Kgx0-X2tDVuuHOb8WO2g";
             
-            document.getElementById("location").innerHTML=latlon;
+            document.getElementById("location").innerHTML="Your coordinates are: "+latlon+" (latitude and longitude, respectively).";
             document.getElementById("mapholder").innerHTML="<img src='"+img_url+"'>";
           }
           
