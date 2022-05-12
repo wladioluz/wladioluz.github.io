@@ -1,0 +1,48 @@
+{ 
+    "short_name": "PWA Characteristics", 
+    "name": "Main Pwa Characteristics", 
+    "description": "Main Characteristics of a Progressive Web Application", 
+    "icons": [ 
+      { 
+        "src": "./192.png", 
+        "type": "image/png", 
+        "sizes": "192x192" 
+      }, 
+      { 
+        "src": "./256.png", 
+        "type": "image/png", 
+        "sizes": "256x256" 
+      }, 
+      { 
+        "src": "./384.png", 
+        "type": "image/png", 
+        "sizes": "384x384" 
+      }, 
+      { 
+        "src": "./512.png", 
+        "type": "image/png", 
+        "sizes": "512x512" 
+      } 
+    ], 
+    "start_url": "index.html", 
+    "background_color": "#3367D6", 
+    "display": "standalone", 
+    "scope": ".", 
+    "theme_color": "#3367D6", 
+    "shortcuts": [ 
+      { 
+        "name": "What is the first characteristic?", 
+        "short_name": "First Characteristic", 
+        "description": "App-like interface", 
+        "url": "index.html", 
+        "icons": [{ "src": "./192.png", "sizes": "192x192" }] 
+      }, 
+      { 
+        "name": "What about second one?", 
+        "short_name": "Second Characteristic", 
+        "description": "Connectivity independence", 
+        "url": "index.html", 
+        "icons": [{ "src": "./256.png", "sizes": "256x256" }] 
+      } 
+    ] 
+  } 

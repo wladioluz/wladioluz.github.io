@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PWA characteristics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="selector.js"></script>
+</head>
+<body id="idImage">
+<header>Main Characteristics of a Progressive Web Application</header>
+<div>
+<label id="selector">Select background image:</label>
+<select onchange="changeBgImage();" name="background" id="selectBg">
+    <option value="makechoice">Make Your Choice</option>
+    <option value="lightblue" id="lightblue">Light Blue</option>
+    <option value="lightgold" id="lightgold">Light Gold</option>
+</select>
+</div>
+<dl>
+    <dt>App-like interface</dt>
+    <dd>These apps mimic navigation and interactions of native apps.</dd>
+    <dt>Connectivity independence</dt>
+    <dd>Progressive web applications can work both offline and on low-quality networks.</dd>
+    <dt>Push notifications</dt>
+    <dd>If used as a part of a good messaging strategy, push notifications can keep customers interested, motivating them to open and use an app more.</dd>
+    <dt>Safety</dt>
+    <dd>These apps are served through HTTPS, so unauthorized users can't access their content.</dd>
+    <dt>Self-updates</dt>
+    <dd>Able to update themselves automatically, apps stay fresh.</dd>
+</dl>
+<footer>
+    <p>Source: <a href="https://www.altexsoft.com/blog/engineering/progressive-web-apps/" target="_blank" rel="noopener noreferrer">altexsoft.com</a></p>
+</footer>
+</body>
+<script src="app.js"></script>
+</html>
