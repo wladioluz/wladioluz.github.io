@@ -1,0 +1,30 @@
+
+{
+    "events": [
+      {
+        "Title": "Apple Worldwide Developers Conference",
+        "Location": "Cupertino, CA",
+        "Time": "June 6, 2022 10:00 AM"
+      },
+      {
+        "Title": "Tech Summit",
+        "Location": "San Francisco, CA",
+        "Time": "June 21, 2022 08:00AM"
+      },
+      {
+        "Title": "Women in Tech",
+        "Location": "Mountain View, CA",
+        "Time": "July 1, 2022 08:00AM"
+      },
+      {
+        "Title": "Evolve Technology Conference",
+        "Location": "Las Vegas, NV",
+        "Time": "October 5, 2022 4:00 PM"
+      },
+      {
+        "Title": "UX & Product Design",
+        "Location": "New York, NY",
+        "Time": "November 1, 2022 12:00 PM"
+      }
+    ]
+  }
