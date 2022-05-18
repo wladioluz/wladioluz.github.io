@@ -3,16 +3,123 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Assignments for CNIT-132</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <meta name="description" content="this is a page with assignments for CNIT-132 course">
+        <style>
+
+            .item1 { grid-area: header; }
+            .item2 { grid-area: menu; }
+            .item3 { grid-area: main; }
+            .item4 { grid-area: footer; }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas: 
+                'header header header header header header'
+                'menu main main main main main'
+                'footer footer footer footer footer footer';
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .grid-container > div {
+                background-color: #373737ff;
+                text-align: center;
+                padding: 20px ;
+            }
+
+            input, textarea{
+                width: 50%;
+  padding: 0.5em 0.6em;
+  margin: 0.5em 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 0.1em;
+  box-sizing: border-box;
+            }
+
+            input[type=submit] {
+                font-size: 0.9em;
+                width: fit-content;
+            }
+
+h1 {
+text-align: center;
+}
+h2 {
+    text-align: left;
+}
+h3 {
+    text-align: center;
+}
+img {
+    vertical-align: middle;
+    padding-right: 5px;
+    width: 130px;
+    height: 150px;
+}
+body {
+    background-color: #141414ff;
+    color: yellow;
+    font-size: 1.3em;
+}
+
+header {
+    font-size: xx-large;
+}
+
+ul {
+    text-align: left;
+}
+
+.item2 li {
+    font-size: larger;
+    padding-bottom: 2em;
+}
+
+a {
+    color: green;
+}
+
+a:visited {
+    color: lightgray;
+}
+
+footer {
+font-style: italic;
+text-align: center;
+}
+        </style>
     </head>
     <body>
-        <header>Wlad Pylypczuk - CNIT 132</header> 
-        <h1>CNIT 132 Assignments:</h1>       
-        <h2><a href="hw4/hw4.html">Homework #4</a> Working with images, school web-site</h2>
-        <h2><a href="homework2.html">Homework #5/Mini-project 2</a> Transforming old HTML to HTML5</h2>
-        <h2><a href="assig5.html">Homework #6</a> Using CSS</h2>
-        <h2><a href="assig7.html">Homework #7</a> Forms</h2>
-        <h2><a href="assig6.html">Homework #8</a> Using CSS Variables</h2>
+        <div class="grid-container">
+
+            <div class="item1">
+        <header>CNIT 132 Assignments:</header> 
+            </div>
+
+            <div class="item2">
+                <ul>
+                    <li><a href=homework1.html rel="noopener noreferrer">Home</a></li>
+                    <li><a href=assignments.html rel="noopener noreferrer">Assignments</a> (this page)</li>
+                    <li><a href=Meet%20Up%20report/index.html rel="noopener noreferrer">MeetUp report</a></li>
+                    <li><a href=contact.html rel="noopener noreferrer">Contact</a></li>
+                </ul>
+                    </div>
+
+                    <div class="item3">
+        <h2><a href="hw4/hw4.html" rel="noopener noreferrer">Homework #4</a> Working with images, school web-site</h2>
+        <h2><a href="homework2.html" rel="noopener noreferrer">Homework #5/Mini-project 2</a> Transforming old HTML to HTML5</h2>
+        <h2><a href="assig5.html" rel="noopener noreferrer">MOD 6 - HW</a> Using CSS</h2>
+                    </div>
+
+                    <div class="item4">
+                        <footer>
+                        <p>This webpage was created by Wladyslaw Pylypczuk, you can contact me on my <a href="mailto:wpylypcz@mail.ccsf.edu">email</a></p>
+                        </footer>
+                    </div>
+        </div>
     </body>
 </html>
