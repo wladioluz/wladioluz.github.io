@@ -1,0 +1,107 @@
+html {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: footer; }
+
+.grid-container {
+display: grid;
+grid-template-areas: 
+'header header header header header header'
+'menu main main main main main'
+'footer footer footer footer footer footer';
+gap: 10px;
+padding: 10px;
+}
+
+.grid-container > div {
+background-color: #373737ff;
+text-align: center;
+padding: 20px ;
+}
+
+@media screen and (max-width: 600px) {
+.grid-container {
+display: grid;
+grid-template-areas: 
+'header header header'
+'menu menu menu'
+'main main main'
+'footer footer footer';
+gap: 10px;
+padding: 10px;
+}
+}
+
+body {
+background-color: #141414ff;
+color: yellow;
+font-size: 1.3em;
+}    
+
+header {
+font-size: xx-large;
+}
+
+h1 {
+text-align: center;
+}
+
+h2 {
+text-align: left;
+}
+    
+h3 {
+text-align: center;
+}
+
+img {
+vertical-align: middle;
+padding-right: 5px;
+width: 130px;
+height: 150px;
+}
+
+ul {
+text-align: left;
+}
+
+.item2 li {
+font-size: larger;
+padding-bottom: 2em;
+}
+
+a {
+color: green;
+}
+
+a:visited {
+color: lightgray;
+}
+
+.note {
+font-size: smaller;
+}
+
+input, textarea{
+width: 50%;
+padding: 0.5em 0.6em;
+margin: 0.5em 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 0.1em;
+box-sizing: border-box;
+}
+
+textarea {
+width: 47%;
+vertical-align: middle;
+}
+
+input[type=submit] {
+font-size: 0.9em;
+width: fit-content;
+}
