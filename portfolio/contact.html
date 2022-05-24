@@ -6,6 +6,11 @@
         <title>Contact me @WP</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="styles.css">
+        <script>
+            function submitForm(){
+                window.alert("Thank you! The form has been sent!");
+            }
+        </script>
     </head>
     <body>
         <div class="grid-container">
@@ -25,6 +30,7 @@
     <div class="item3">
         <p>either by using footer information, or by using the contact form bellow:</p>
         <form id="myForm" action="https://formsubmit.co/w.pylypczuk@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
             <div>
                 <label for="myName">Name:<span style="color: red;"> *</span></label>
                 <input type="text" name="myName" id="myName" required>
@@ -37,7 +43,7 @@
                 <label for="myComments">Comments:</label>
                 <textarea name="myComments" id="myComments" rows="4" cols="20"></textarea>
             </div>            
-            <div><input type="submit" value="Submit"></div>
+            <div><input type="submit" value="Submit" onclick="submitForm()"></div>
         </form>
     </div>
     <div class="item4">
