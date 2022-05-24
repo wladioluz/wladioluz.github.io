@@ -86,22 +86,38 @@ color: lightgray;
 font-size: smaller;
 }
 
-input, textarea{
-width: 50%;
-padding: 0.5em 0.6em;
-margin: 0.5em 0;
-display: inline-block;
-border: 1px solid #ccc;
-border-radius: 0.1em;
-box-sizing: border-box;
+form {
+    border-radius: 0.3em;
+    background-color: rgb(87, 84, 84);
+    padding: 1em;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
 }
 
-textarea {
-width: 47%;
-vertical-align: middle;
+form input, form textarea {
+    width: 50%; 
+    padding: 0.3em;
+    border: 1px solid;
+    border-radius: 0.3em;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
 }
 
-input[type=submit] {
-font-size: 0.9em;
-width: fit-content;
+form input[type=submit] {
+    background-color: #04AA6D;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+form input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+textarea::placeholder {
+    font-family: Arial, Helvetica, sans-serif;    ;
 }
