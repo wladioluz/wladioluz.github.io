@@ -121,3 +121,33 @@ form input[type=submit]:hover {
 textarea::placeholder {
     font-family: Arial, Helvetica, sans-serif;    ;
 }
+
+footer {
+    font-size: smaller;
+}
+
+.fa {
+    padding: 0.5em;
+    text-decoration: none;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.fa:hover {
+    opacity: 0.6;
+}
+
+.fa-instagram {
+    background:#fb3958;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb6;
+    color: white;
+}
+
+.fa-github {
+    background: #333;
+    color: white;
+}
