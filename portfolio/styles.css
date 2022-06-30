@@ -36,10 +36,10 @@ padding: 10px;
 }
 
 iframe {
-    height: 55%;
+    height: 40%;
 }
 ::placeholder {
-    font-size: 55%;
+    font-size: 70%;
 }
     
 }
