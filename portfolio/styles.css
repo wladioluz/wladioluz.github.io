@@ -34,6 +34,11 @@ grid-template-areas:
 gap: 10px;
 padding: 10px;
 }
+
+iframe {
+width: 100%;
+}
+    
 }
 
 body {
