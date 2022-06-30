@@ -39,6 +39,10 @@ iframe {
 width: 100%;
 }
     
+::placeholder {
+font-size: 0.4em;
+}
+    
 }
 
 body {
